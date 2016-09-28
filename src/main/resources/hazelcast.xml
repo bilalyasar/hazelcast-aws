@@ -1,0 +1,25 @@
+<hazelcast xsi:schemaLocation="http://www.hazelcast.com/schema/config hazelcast-config-3.6.xsd"
+           xmlns="http://www.hazelcast.com/schema/config"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <group>
+        <name>dev</name>
+        <password>dev-pass</password>
+    </group>
+    <network>
+        <join>
+            <multicast enabled="false">
+            </multicast>
+            <tcp-ip enabled="false">
+            </tcp-ip>
+            <aws enabled="true">
+                <access-key>XXXXXXXX</access-key>
+                <secret-key>XXXXXXXXX</secret-key>
+                <region>us-east-1</region>
+                <host-header>ec2.amazonaws.com</host-header>
+                <tag-key>deneme</tag-key>
+                <tag-value>deneme</tag-value>
+            </aws>
+        </join>
+    </network>
+
+</hazelcast>
